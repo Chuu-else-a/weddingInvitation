@@ -142,16 +142,16 @@
 .fix_motion .fix_wrap .text_box p.txt03 {margin-top:0px;}
 .fix_motion .fix_wrap .text_box p.txt04 {margin-top:0px;margin-bottom:0;}
 
-.fix_motion .fix_wrap .device_fix {top: 410px; width: 100%; opacity: 0; transition:opacity .5s; position:fixed}
+.fix_motion .fix_wrap .device_fix {top: 60%; width: 100%; opacity: 0; transition:opacity .5s; position:fixed; z-index: 4;}
 .fix_motion .fix_wrap .device_fix.active {opacity: 1;}
 .fix_motion .fix_wrap .device_fix .watch_img {width: 370px; height: 272px;}
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap {top: 66px; left: 120px; width: 120px; height: 146px;}
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap .slide {width: 480px;}
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap .slide figure {width:120px;}
 
-.footer {position:fixed; background: ivory; top: 96%; left: 50%; transform: translate( -50%, -50% ); width: 100%; font-family: 'MonoplexKR-Regular'; opacity: 0; transition:opacity .5s;}
+.footer {position:fixed; background: ivory; top: 96%; left: calc(50vw - 151px); width: 100%; font-family: 'MonoplexKR-Regular'; opacity: 0; transition:opacity .5s; text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
 .footer.active {opacity: 1;}
-.footer .text_area {position: relative; z-index: 20;}
+.footer .text_area {position: fixed; z-index: 20;}
 .footer .text_area p {color:rgb(0, 0, 0); font-size:12px; text-align: center;}
 
 /* 갤러리 */
@@ -249,7 +249,7 @@
 		</section>
 		<section>
 			<!-- scroll down gif -->
-			<img src="images/scrolldown.gif" alt="" style="width: 100vw; margin-top:30px">
+			<img src="images/scrolldown.gif" alt="" style="width: 100vw; ">
 		</section>
 		<section class="com_divider">
 			<!-- 하트 구분자 gif -->
@@ -281,6 +281,8 @@
 						<u>　　　</u><br><br>
 						노중섭 · 최윤호의 아들&emsp;<span style="font-weight: 700;">현덕</span><br>
 						이태관 · 이명주의 딸&emsp;&emsp;<span style="font-weight: 700;">보경</span><br>			
+						<!-- scroll down gif -->
+						<img src="images/scrolldown2.gif" alt="" style="width: 85vw; margin-top: 30px;">
 					</p>
 					<p class="txt02">
 						<span style="font-weight: 700;">📍장소 & 오시는 길</span><br>
@@ -332,16 +334,16 @@
 						<div class="slide_wrap">
 							<div class="slide">
 								<figure>
-									<img src="images/1.jpg">
+									<img src="images/photoshoot/1.JPG">
 								</figure>
 								<figure>
-									<img src="images/2.jpg">
+									<img src="images/photoshoot/3.JPG">
 								</figure>
 								<figure>
-									<img src="images/3.jpg">
+									<img src="images/photoshoot/6.JPG">
 								</figure>
 								<figure>
-									<img src="images/4.jpg">
+									<img src="images/photoshoot/15.JPG">
 								</figure>
 							</div>
 						</div>
@@ -349,7 +351,6 @@
 				</div>
 			</article>
 		</section>
-		<section style="position:relative;"></section>
 		<footer class="footer">
 			<div class="text_area">
 				<p>
@@ -367,15 +368,62 @@
 		</div>
 		<!-- Full-width images with number and caption text -->
 		<div class="mySlides fade modal-body">
-		<img src="images/1.jpg" style="width:100%">
+		<img src="images/photoshoot/1.JPG" style="width:100%">
 		</div>
 	
 		<div class="mySlides fade">
-		<img src="images/2.jpg" style="width:100%">
+		<img src="images/photoshoot/2.JPG" style="width:100%">
 		</div>
 	
 		<div class="mySlides fade">
-		<img src="images/3.jpg" style="width:100%">
+		<img src="images/photoshoot/3.JPG" style="width:100%">
+		</div>
+		<div class="mySlides fade modal-body">
+		<img src="images/photoshoot/4.JPG" style="width:100%">
+		</div>
+	
+		<div class="mySlides fade">
+		<img src="images/photoshoot/5.JPG" style="width:100%">
+		</div>
+	
+		<div class="mySlides fade">
+		<img src="images/photoshoot/6.JPG" style="width:100%">
+		</div>
+		<div class="mySlides fade modal-body">
+		<img src="images/photoshoot/7.JPG" style="width:100%">
+		</div>
+	
+		<div class="mySlides fade">
+		<img src="images/photoshoot/8.JPG" style="width:100%">
+		</div>
+	
+		<div class="mySlides fade">
+		<img src="images/photoshoot/9.JPG" style="width:100%">
+		</div>
+		<div class="mySlides fade modal-body">
+		<img src="images/photoshoot/10.JPG" style="width:100%">
+		</div>
+	
+		<div class="mySlides fade">
+		<img src="images/photoshoot/11.JPG" style="width:100%">
+		</div>
+	
+		<div class="mySlides fade">
+		<img src="images/photoshoot/12.JPG" style="width:100%">
+		</div>
+		<div class="mySlides fade modal-body">
+		<img src="images/photoshoot/13.JPG" style="width:100%">
+		</div>
+	
+		<div class="mySlides fade">
+		<img src="images/photoshoot/14.JPG" style="width:100%">
+		</div>
+	
+		<div class="mySlides fade">
+		<img src="images/photoshoot/15.JPG" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+		<img src="images/photoshoot/16.JPG" style="width:100%">
 		</div>
 	
 		<!-- Next and previous buttons -->
