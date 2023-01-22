@@ -20,9 +20,16 @@
 <style type="text/css">
 
 @font-face {
-    font-family: 'GangwonEdu_OTFBoldA';
+    font-family: 'GangwonEdu_OTFLight';
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEdu_OTFBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -105,7 +112,7 @@
 .fix_motion {background:ivory; position:relative;}
 .fix_motion .fix_wrap:after {clear:both; display:block; content:'';}
 .fix_motion .fix_wrap .tit {position:relative; z-index:50; margin-bottom:170px; font-size:20px; color:rgb(0, 0, 0); text-align: center;}
-.fix_motion .fix_wrap .text_box p {max-width:80%; font-size:30px; font-family: '강원교육모두 Light'; color:rgb(0, 0, 0); transition:color .5s;}
+.fix_motion .fix_wrap .text_box p {max-width:80%; font-size:30px; font-family: 'GangwonEdu_OTFLight'; color:rgb(0, 0, 0); transition:color .5s;}
 .fix_motion .fix_wrap .text_box p.active {color:rgb(0, 0, 0);}
 .fix_motion .fix_wrap .text_box p.txt02 {margin-top:300px;}
 .fix_motion .fix_wrap .text_box p.txt03 {margin-top:300px;}
@@ -122,7 +129,7 @@
 @media only screen and (max-width: 1024px) {
  html { font-size:10px; }
 .ggang_box { padding-top: 10vh; height: 50vh } 
-.ggang_box .box-wrap { width: 90%; font-size: 2.3rem; font-family: '강원교육모두 Light'; color:white; position: relative; top: 10%; left: 50%; transform: translate( -50%, -50% ); margin-top: 2vh;} 
+.ggang_box .box-wrap { width: 90%; font-size: 2.3rem; font-family: 'GangwonEdu_OTFLight'; color:white; position: relative; top: 10%; left: 50%; transform: translate( -50%, -50% ); margin-top: 2vh;} 
 .ggang_box .box-img { width: 100%; vertical-align: middle;}
 .ggang_box .box-text { padding: 5px 10px; position: absolute; top: 18%; left: 50%; transform: translate( -50%, -50% ); width: 80%; text-align: center; }
 .com_divider {margin:30vh calc(58vw - 59px) 20vh; width: 15%; }
@@ -137,7 +144,7 @@
 .fix_motion .fix_wrap .text_box p.txt03 {margin-top:0px;}
 .fix_motion .fix_wrap .text_box p.txt04 {margin-top:0px;margin-bottom:0;}
 
-.fix_motion .fix_wrap .device_fix {top: 56vh; width: 100%; opacity: 0; transition:opacity .5s;}
+.fix_motion .fix_wrap .device_fix {top: 60vh; width: 100%; opacity: 0; transition:opacity .5s;}
 .fix_motion .fix_wrap .device_fix.active {opacity: 1;}
 .fix_motion .fix_wrap .device_fix .watch_img {width: 370px; height: 272px;}
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap {top: 66px; left: 120px; width: 120px; height: 146px;}
@@ -307,15 +314,12 @@
 						<span style="font-weight: 700;">🙋‍♀️궁금한게 있어요!</span><br><br><br>
 					</p>
 					<p class="txt04" style="text-align: left; padding-top: 9vh; left:12vw; width:80%; font-size:1.6rem; line-height: 140%;">
-						<span style="font-weight: 700; background-color:rgb(241, 255, 204)">Q. 주차권은 어디서 받나요?</span><br>
-						A. 어디어디 데스크에서 받으시면 됩니다.<br><br>
-						<span style="font-weight: 700; background-color:rgb(241, 255, 204)">Q. 주차는 몇 시간 가능한가요?</span><br>
-						A. 주차권이 없으면 2시간까지 무료주차 가능합니다. 그 이상 주차예정이신 분들은 잊지 말고 주차권을 꼭 받아주세요!<br><br>
+						<span style="font-weight: 700; background-color:rgb(241, 255, 204)">Q. 주차권을 받아야 하나요?</span><br>
+						A. 2시간까지 무료주차 가능합니다. 그 이상 주차예정이신 분들은 잊지 말고 데스크에서 주차권을 꼭 받아주세요!<br><br>
 						<span style="font-weight: 700; background-color:rgb(241, 255, 204)">Q. 연회장은 어디인가요?</span><br>
-						A. 예식장과 같은 2층에 위치해있습니다.<br>
-						&emsp;바로 옆에 붙어있으니 멀리 가지 마세요!<br><br>
+						A. 예식장과 같은 2층에 위치해있습니다. 바로 옆에 붙어있으니 멀리 가지 마세요!<br><br>
 						<span style="font-weight: 700; background-color:rgb(241, 255, 204)">Q. 식사는 언제부터 할 수 있나요?</span><br>
-						A. 예식시작 30분 전인 11시 30분부터 가능합니다😊<br><br>
+						A. 예식시작 30분 전인 11시 30분부터 가능합니다.<br><br>
 					</p>
 				</div>
 				<div class="device_fix">
