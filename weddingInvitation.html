@@ -2,9 +2,9 @@
 <html lang="ko">
 <head>
 
-	<meta charset="utf-8">
+<meta charset="utf-8">
 <meta http-equiv="X-UA-compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
 <meta property="og:image" content="images/kakao_main.png"> 
 <meta property="og:title" content="현덕 그리고 보경, 결혼합니다!"> 
 <meta property="og:description" content="4월 1일 (토) 오후 12시, 신촌 케이터틀"> 
@@ -21,7 +21,7 @@
 </script>
 
 <!-- 네이버지도API -->
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=5wrtfbh4rk"></script>
+<!-- <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=5wrtfbh4rk"></script> -->
     
 </head>
 <style type="text/css">
@@ -69,7 +69,7 @@
 .section_today .date_box .date_count .count_box span {display:block; height:200px; font-size:50px; line-height: 1; text-align: center; -webkit-text-fill-color:black;}
 
 .accButton {
-  background-color: antiquewhite;
+  background-color: #F2E8CF;
   border-radius: 8px;
   border-width: 0;
   color: #333333;
@@ -163,6 +163,8 @@
 .footer .text_area {position: fixed; z-index: 20;}
 .footer .text_area p {color:rgb(0, 0, 0); font-size:12px; text-align: center;}
 
+.scrollNoti {margin-top:30px; font-size:1.3rem; font-family: 'MonoplexKR-Regular'; display: block; background-color: #dcf3cc; font-weight: 500;}
+
 /* 갤러리 */
 .swiper {
 	width: 100%; /* Full width */
@@ -205,7 +207,6 @@
 }
 
 
-
 /* The Close Button */
 .close {
   position: fixed;
@@ -217,13 +218,36 @@
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
 
+.page-indicator {
+    position:fixed;
+    top:75%;
+    left:5vw;
+    transform:translateY(-50%);
+    border:2px dotted #A7C957;
+	background-color: beige;
+    padding:5px;
+    transition:transform 0.3s;
+	font-family: 'GangwonEdu_OTFLight';
+	font-size: 1.5rem;
+	text-align: center;
+	color: gray;
+	display: none;
+}
+
+@keyframes blink-effect {
+	0%,100% { opacity: 0.5 }
+	50% { opacity: 1 }
+}
+
+.blink {
+  animation: blink-effect 2s linear infinite;
+}
 }
 
 </style>
@@ -266,46 +290,55 @@
 						노중섭 · 최윤호의 아들&emsp;<span style="font-weight: 700;">현덕</span><br>
 						이태관 · 이명주의 딸&emsp;&emsp;<span style="font-weight: 700;">보경</span><br>			
 						<!-- scroll down gif -->
-						<img src="images/scrolldown2.gif" alt="" style="width: 85vw; margin-top: 30px;">
+						<!-- <img src="images/scrolldown2.gif" alt="" style="width: 85vw; margin-top: 30px;"> -->
+						<span class="scrollNoti blink">아래로 스크롤하거나 왼쪽 메뉴를 누르세요👰🤵</span>
 					</p>
-					<p class="txt02">
-						<span style="font-weight: 700;">📍장소 & 오시는 길</span><br>
-					</p>
-					<p class="txt02" style="text-align: center; padding-top: 50px; left:12%; width:80%; font-size:1.6rem; line-height: 140%;">
-						서울 마포구 백범로 23<br>
-						케이터틀 (구 거구장) 컨벤션홀 (2층)<br>
-						<button class="accButton" role="button" onclick="copyToClipboard('서울 마포구 백범로 23 케이터틀');" style="padding: 2px 10px; margin:4px; z-index: 3; position: relative;">주소 복사하기</button><br><br>
-					</p>
-					<p class="txt02" id="map" style="width: 80%; height: 180px; margin:11vw;"></p>
-					<p class="txt02" style="text-align: left; padding-top: 330px; left:8vw; width:85%; font-size:1.6rem; line-height: 130%;">
-						🚇 신촌역 6번출구, 서강대역 1번출구 이용<br>
-						🚙 스타벅스 서강대점 오른편 주차장 이용
-					</p>
-					<p class="txt03">
-						<span style="font-weight: 700;">💌마음 전하기</span><br><br><br>
-					</p>
-					<p class="txt03" style="text-align: left; padding-top: 70px; left:16vw; width:80%; font-size:1.6rem; line-height: 100%;">
-						<span style="background-color:rgb(214, 255, 226)">신랑 노현덕</span><br>
-						카카오 3333-22-4169720&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('카카오뱅크 3333224169720');">복사</button><br><br>
-						신랑 아버지 노중섭<br>
-						농협 453039-56-141003&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('농협은행 45303956141003');">복사</button><br><br>
-						신랑 어머니 최윤호<br>
-						하나 661-910005-52608&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('하나은행 66191000552608');">복사</button><br><br>
-						<u>　　　</u><br><br>
-						<span style="background-color:rgb(255, 225, 239)">신부 이보경</span><br>
-						케이뱅크 3333-03-4825102&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('케이뱅크 100131557642');">복사</button><br><br>
-					</p>
-					<p class="txt04">
-						<span style="font-weight: 700;">🙋‍♀️궁금한게 있어요!</span><br><br><br>
-					</p>
-					<p class="txt04" style="text-align: left; padding-top: 70px; left:12vw; width:80%; font-size:1.6rem; line-height: 140%;">
-						<span style="font-weight: 700; background-color:rgb(241, 255, 204)">Q. 주차권을 받아야 하나요?</span><br>
-						A. 2시간까지 무료주차 가능합니다. 그 이상 주차예정이신 분들은 잊지 말고 데스크에서 주차권을 꼭 받아주세요!<br><br>
-						<span style="font-weight: 700; background-color:rgb(241, 255, 204)">Q. 연회장은 어디인가요?</span><br>
-						A. 예식장과 같은 2층에 위치해있습니다. 바로 옆에 붙어있으니 멀리 가지 마세요!<br><br>
-						<span style="font-weight: 700; background-color:rgb(241, 255, 204)">Q. 식사는 언제부터 할 수 있나요?</span><br>
-						A. 예식시작 30분 전인 11시 30분부터 가능합니다.<br><br>
-					</p>
+					<div id="page1">
+						<p class="txt02">
+							<span style="font-weight: 700;">📍장소 & 오시는 길</span><br>
+						</p>
+						<p class="txt02" style="text-align: center; padding-top: 50px; left:12%; width:80%; font-size:1.6rem; line-height: 140%;">
+							서울 마포구 백범로 23<br>
+							케이터틀 (구 거구장) 컨벤션홀 (2층)<br>
+							<button class="accButton" role="button" onclick="copyToClipboard('서울 마포구 백범로 23 케이터틀');" style="padding: 2px 10px; margin:4px; z-index: 3; position: relative;">주소 복사하기</button><br><br>
+						</p>
+						<p class="txt02" id="map" style="width: 80%; height: 180px; margin:11vw;"></p>
+						<p class="txt02" style="text-align: left; padding-top: 330px; left:8vw; width:85%; font-size:1.6rem; line-height: 130%;">
+							🚇 신촌역 6번출구, 서강대역 1번출구 이용<br>
+							🚙 스타벅스 서강대점 오른편 주차장 이용
+						</p>
+					</div>
+					<div id="page2">
+						<p class="txt03">
+							<span style="font-weight: 700;">💌마음 전하기</span><br><br><br>
+						</p>
+						<p class="txt03" style="text-align: left; padding-top: 70px; left:16vw; width:80%; font-size:1.6rem; line-height: 100%;">
+							<span style="background-color:#dcf3cc">신랑 노현덕</span><br>
+							카카오 3333-22-4169720&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('카카오뱅크 3333224169720');">복사</button><br><br>
+							신랑 아버지 노중섭<br>
+							농협 453039-56-141003&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('농협은행 45303956141003');">복사</button><br><br>
+							신랑 어머니 최윤호<br>
+							하나 661-910005-52608&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('하나은행 66191000552608');">복사</button><br>
+							<u>　　　</u><br><br>
+							<span style="background-color:#f7cecf">신부 이보경</span><br>
+							케이뱅크 3333-03-4825102&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('케이뱅크 100131557642');">복사</button><br><br>
+							신부 어머니 이명주<br>
+							신한 110-259-422700&nbsp;<button class="accButton" role="button" onclick="copyToClipboard('신한은행 110259422700');">복사</button><br>
+						</p>
+					</div>
+					<div id="page3">
+						<p class="txt04">
+							<span style="font-weight: 700;">🙋‍♀️궁금한게 있어요!</span><br><br><br>
+						</p>
+						<p class="txt04" style="text-align: left; padding-top: 70px; left:12vw; width:80%; font-size:1.6rem; line-height: 140%;">
+							<span style="font-weight: 700; background-color:#dcf3cc">Q. 주차권을 받아야 하나요?</span><br>
+							A. 2시간까지 무료주차 가능합니다. 그 이상 주차예정이신 분들은 잊지 말고 데스크에서 주차권을 꼭 받아주세요!<br><br>
+							<span style="font-weight: 700; background-color:#dcf3cc">Q. 연회장은 어디인가요?</span><br>
+							A. 예식장과 같은 2층에 위치해있습니다. 바로 옆에 붙어있으니 멀리 가지 마세요!<br><br>
+							<span style="font-weight: 700; background-color:#dcf3cc">Q. 식사는 언제부터 할 수 있나요?</span><br>
+							A. 예식시작 30분 전인 11시 30분부터 가능합니다.<br><br>
+						</p>
+					</div>
 				</div>
 				<div class="device_fix">
 					<div class="watch_img">
@@ -369,6 +402,13 @@
 		<div class="swiper-button-prev"></div>
 		<div class="swiper-pagination"></div>
 	</div>
+	<div class="page-indicator">
+		<ul>
+			<li id="page_venue"><a href="Venue">오시는 길</a></li>
+			<li id="page_account"><a href="Account">마음 전하기</a></li>
+			<li id="page_faq"><a href="FAQ">FAQ</a></li>
+		</ul>
+	</div>
 
 
 <script type="text/javascript">
@@ -405,7 +445,7 @@ $(function(){
 
 	var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 20,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -441,6 +481,28 @@ $(function(){
 	}
 	})
 
+
+	$('.page-indicator > ul > li > a').click(function(e) {
+		var href = $(this).attr('href');
+		
+		if (href == 'Venue') {
+			percent = 90;
+		}
+		else if (href == 'Account') {
+			percent = 125;
+		}
+		else if (href == 'FAQ') {
+			percent = 160;
+		}
+
+		scrollY = (((percent - 50) / 100) * scrollRealHeight + (sectionOffsetTop * 1));
+		window.scrollTo(0,scrollY);
+
+		e.preventDefault();
+	});
+
+
+
 	setTimeout(function() {
 	$('section').addClass('active');
 	},50);
@@ -454,11 +516,13 @@ $(function(){
 	var scrollPerecnt;
 	var percent;
 	var isMobile;
+	var scrollY;
 
 	function scrollFunc() {
 
 		setProperty();
 		contentInMobile();
+
 	};
 
 	function setProperty() {
@@ -469,50 +533,11 @@ $(function(){
 		sectionOffsetTop = scrollBody.offset().top;
 		scrollRealHeight = (scrollHeight - $(window).height());
 		winScrollTop = $(window).scrollTop();
-		sectionScrolTop = winScrollTop - sectionOffsetTop;
-		scrollPerecnt =  sectionScrolTop / scrollRealHeight;
+		sectionScrollTop = winScrollTop - sectionOffsetTop;
+		scrollPerecnt =  sectionScrollTop / scrollRealHeight;
 		percent = (scrollPerecnt * 100) + 50;
 	};
 
-	function contentIn() {
-
-		var deviceImg = $('.device_fix .slide_wrap figure');
-		var imgWidth = deviceImg.width();
-
-		if(percent >= 12 && percent < 43) {
-
-			imageChange(imgWidth * 0);
-			$('.fix_motion .text_box .txt01').addClass('active');
-		}
-
-		if(percent >= 43 && percent < 75) {
-
-			imageChange(imgWidth * 1);
-			$('.fix_motion .text_box .txt02').addClass('active');
-		}
-
-		if(percent >= 75 && percent < 100) {
-
-			imageChange(imgWidth * 2);
-			$('.fix_motion .text_box .txt04').css('display','none');
-			$('.fix_motion .text_box .txt03').addClass('active');
-			
-		}
-
-		if(percent >= 100) {
-
-			imageChange(imgWidth * 3);
-			$('.fix_motion .text_box .txt04').addClass('active');
-		}
-
-		if(percent < 12 ) {
-
-			$('.fix_motion .text_box .txt01').removeClass('active');
-			$('.fix_motion .text_box .txt02').removeClass('active');
-			$('.fix_motion .text_box .txt03').removeClass('active');
-			$('.fix_motion .text_box .txt04').removeClass('active');
-		}
-	};
 
 	function contentInMobile() {
 
@@ -529,7 +554,15 @@ $(function(){
 			if(percent >= 50){
 				$('.fix_motion .fix_wrap .device_fix').addClass('active');
 				$('.footer').addClass('active');
+				$('.page-indicator').fadeIn(500);
 			}
+
+			$('#page_venue').css('background-color','transparent');
+			$('#page_venue').css('color','gray');
+			$('#page_account').css('background-color','transparent');
+			$('#page_account').css('color','gray');
+			$('#page_faq').css('background-color','transparent');
+			$('#page_faq').css('color','gray');
 		}
 
 
@@ -543,6 +576,13 @@ $(function(){
 			$('.fix_motion .text_box .txt02').addClass('active');
 			$('.fix_motion .fix_wrap .device_fix').addClass('active');
 			$('.footer').addClass('active');
+
+			$('#page_venue').css('background-color','#386641');
+			$('#page_venue').css('color','white');
+			$('#page_account').css('background-color','transparent');
+			$('#page_account').css('color','gray');
+			$('#page_faq').css('background-color','transparent');
+			$('#page_faq').css('color','gray');
 		}
 
 		if(percent >= 90 && percent < 125) {
@@ -554,6 +594,13 @@ $(function(){
 			$('.fix_motion .text_box .txt03').addClass('active');
 			$('.fix_motion .fix_wrap .device_fix').addClass('active');
 			$('.footer').addClass('active');
+
+			$('#page_venue').css('background-color','transparent');
+			$('#page_venue').css('color','gray');
+			$('#page_account').css('background-color','#386641');
+			$('#page_account').css('color','white');
+			$('#page_faq').css('background-color','transparent');
+			$('#page_faq').css('color','gray');
 			
 		}
 
@@ -565,6 +612,13 @@ $(function(){
 			$('.fix_motion .text_box .txt04').addClass('active');
 			$('.fix_motion .fix_wrap .device_fix').addClass('active');
 			$('.footer').addClass('active');
+
+			$('#page_venue').css('background-color','transparent');
+			$('#page_venue').css('color','gray');
+			$('#page_account').css('background-color','transparent');
+			$('#page_account').css('color','gray');
+			$('#page_faq').css('background-color','#386641');
+			$('#page_faq').css('color','white');
 
 		}
 
@@ -578,6 +632,7 @@ $(function(){
 		if(percent < 50) {
 			$('.fix_motion .fix_wrap .device_fix').removeClass('active');
 			$('.footer').removeClass('active');
+			$('.page-indicator').fadeOut(500);
 		}
 
 		if(percent < 0) {
