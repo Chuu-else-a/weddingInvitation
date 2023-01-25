@@ -490,7 +490,7 @@ $(function(){
 		var href = $(this).attr('href');
 		
 		if (href == 'Venue') {
-			percent = 115;
+			percent = 105;
 		}
 		else if (href == 'Account') {
 			percent = 140;
@@ -548,7 +548,7 @@ $(function(){
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
-		if(percent >= 0 && percent < 80){
+		if(percent >= 0 && percent < 70){
 
 			imageChange(imgWidth * 0);
 			$('.fix_motion .text_box p').removeClass('active');
@@ -570,7 +570,7 @@ $(function(){
 		}
 
 
-		if(percent >= 80 && percent < 115) {
+		if(percent >= 70 && percent < 105) {
 
 			imageChange(imgWidth * 1);
 			$('.fix_motion .text_box p').removeClass('active');
@@ -589,7 +589,7 @@ $(function(){
 			$('#page_faq').css('color','gray');
 		}
 
-		if(percent >= 115 && percent < 140) {
+		if(percent >= 105 && percent < 140) {
 
 			imageChange(imgWidth * 2);
 			$('.fix_motion .text_box p').removeClass('active');
